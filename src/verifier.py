@@ -11,26 +11,27 @@ class InvalidAuthorizationToken(Exception):
 
 
 class AzureVerifier:
-    ms_url = 'https://login.microsoftonline.com'
+    api_version = 'v2.0'
+    authority = 'https://login.microsoftonline.com'
     tenant = 'common'
-    openid_uri = '.well-known/openid-configuration'
+    discovery_document = '.well-known/openid-configuration'
 
     audiences = None
     issuer = None
 
     def __init__(self, tenant='common', issuer=None, audiences=None):
-        self.tenant = tenant
+        self.tenant = tenant or self.tenant
         self.issuer = issuer
         self.audiences = audiences
         self.session = CacheControl(requests.Session())
 
     @property
-    def openid_url(self):
-        return f'{self.ms_url}/{self.tenant}/v2.0/{self.openid_uri}'
+    def documents_uri(self):
+        return f'{self.authority}/{self.tenant}/{self.api_version}/{self.discovery_document}'
 
     @property
     def jwks_uri(self):
-        return self.session.get(self.openid_url).json()['jwks_uri']
+        return self.session.get(self.documents_uri).json()['jwks_uri']
 
     @property
     def jwks(self):
