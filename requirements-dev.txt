@@ -1,3 +1,2 @@
-ddt<2
 flake8
 pytest-cov
