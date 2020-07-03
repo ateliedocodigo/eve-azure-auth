@@ -1,6 +1,6 @@
-__title__ = 'eve-azure-ad-auth'
+__title__ = 'Eve-Azure-Auth'
 __description__ = ''
-__url__ = 'https://github.com/ateliedocodigo/eve-azure-ad-auth'
+__url__ = 'https://github.com/ateliedocodigo/eve-azure-auth'
 __version__ = '0.0.0'
 __author__ = 'LuisComS'
 __author_email__ = 'luiscoms@ateliedocodigo.com.br'
