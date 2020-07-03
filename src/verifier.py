@@ -2,7 +2,7 @@ import jwt
 import requests
 from cachecontrol import CacheControl
 
-from src.jwksutils import rsa_pem_from_jwk
+from .jwksutils import rsa_pem_from_jwk
 
 
 class InvalidAuthorizationToken(Exception):
