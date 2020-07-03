@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = src
+omit = .tox/*
+       *test_*
+       setup.py
+
+[report]
+show_missing = True
