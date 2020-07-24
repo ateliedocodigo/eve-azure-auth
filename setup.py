@@ -35,4 +35,5 @@ setup(
     exclude_package_data={'': ['README.md']},
     package_dir={'eve_azure_ad_auth': 'src'},
     packages=['eve_azure_ad_auth'],
+    python_requires='>= 3.6',
 )
