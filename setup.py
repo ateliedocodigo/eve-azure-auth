@@ -14,10 +14,10 @@ with open('README.md') as f:
     readme = f.read()
 
 reqs = [
-    'cachecontrol<1',
-    'cryptography<3',
-    'PyJWT<2',
-    'eve<2',
+    'cachecontrol',
+    'cryptography',
+    'PyJWT',
+    'eve',
 ]
 
 setup(
