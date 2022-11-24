@@ -10,7 +10,7 @@ def get_info(info):
     raise RuntimeError('Unable to find version string.')
 
 
-with open('README.md', 'r') as f:
+with open('README.md') as f:
     readme = f.read()
 
 reqs = [
