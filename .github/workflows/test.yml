@@ -12,8 +12,10 @@ jobs:
     strategy:
       #fail-fast: false
       matrix:
-        os: [ubuntu-stable, macos-latest, windows-latest]
-        python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
+        #python-version: ["3.5", "3.6", "3.7", "3.8", "3.9", "3.10"]
+        #os: [ubuntu-stable, macos-latest, windows-latest]
+        os: [ubuntu-stable]
+        python-version: ["3.9"]
         exclude:
           - os: windows-latest
             python-version: "3.10"  # won't compile psycopg2
